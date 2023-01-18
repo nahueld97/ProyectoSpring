@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class PruebasJDBC {
 	public static void main(String[] args) {
-		String jdbcUrl = "jdbc:mysql://localhost:3306/puebashibernate?useSSL=false";
+		String jdbcUrl = "jdbc:mysql://@localhost:3306/puebashibernate?useSSL=false";
 		String user="root";
 		String pass="bd-dcic";
 		try {
