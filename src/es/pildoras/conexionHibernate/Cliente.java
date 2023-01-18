@@ -6,14 +6,9 @@ import javax.persistence.*;
 @Table(name="clientes")
 public class Cliente {
 	
-	@Id
-	@Column(name="Id")
 	private int id;
-	@Column(name="Nombre")
 	private String nombre;
-	@Column(name="Apellido")
 	private String apellidos;
-	@Column(name="Direccion")
 	private String direccion;
 	
 	public Cliente() {
@@ -25,6 +20,8 @@ public class Cliente {
 		this.direccion = direccion;
 	}
 
+	@Id
+	@Column(name="Id")
 	public int getId() {
 		return id;
 	}
@@ -33,6 +30,7 @@ public class Cliente {
 		this.id = id;
 	}
 
+	@Column(name="Nombre")
 	public String getNombre() {
 		return nombre;
 	}
@@ -41,6 +39,7 @@ public class Cliente {
 		this.nombre = nombre;
 	}
 
+	@Column(name="Apellido")
 	public String getApellidos() {
 		return apellidos;
 	}
@@ -49,6 +48,7 @@ public class Cliente {
 		this.apellidos = apellidos;
 	}
 
+	@Column(name="Direccion")
 	public String getDireccion() {
 		return direccion;
 	}
