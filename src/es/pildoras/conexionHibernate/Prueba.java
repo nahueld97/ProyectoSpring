@@ -21,11 +21,19 @@ public class Prueba {
 		//inicia la sesion que permitira modificar la DB
 		Session session = factory.openSession();
 		try {
-			Cliente cliente1 = new Cliente("Pancho","Diaz","casa 1234"); //Creo un cliente para agregar
+			Cliente cliente1 = new Cliente("Julieta","Sosa","casa 1235"); //Creo un cliente para agregar
 			session.beginTransaction();	//comienza la transaccion
 			session.save(cliente1); //agrego al cliente
 			session.getTransaction().commit(); //Si todo salio bien confirmo los cambios
 			System.out.println("Registro insertado correctamente en DB");
+			
+			//Lectura de registro
+			session.beginTransaction();
+			System.out.println("Lectura de registro con Id: "+ cliente1.getId());
+			Cliente clienteInsertado=session.get(Cliente.class, cliente1.getId());
+			System.out.println("Registro: "+ clienteInsertado);
+			session.getTransaction().commit();
+			
 			session.close();
 		} finally {
 			factory.close();
