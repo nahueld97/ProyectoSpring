@@ -1,0 +1,51 @@
+JvmtiExport can_access_local_variables 0
+JvmtiExport can_hotswap_or_post_breakpoint 0
+JvmtiExport can_post_on_exceptions 0
+# 215 ciObject found
+instanceKlass sun/security/util/SecurityProviderConstants
+instanceKlass java/security/Provider$UString
+instanceKlass java/security/Provider$Service
+instanceKlass sun/security/provider/NativePRNG$NonBlocking
+instanceKlass sun/security/provider/NativePRNG$Blocking
+instanceKlass sun/security/provider/NativePRNG
+instanceKlass sun/security/provider/SunEntries$1
+instanceKlass sun/security/provider/SunEntries
+instanceKlass sun/security/jca/ProviderList$2
+instanceKlass jdk/internal/math/FloatingDecimal$ASCIIToBinaryBuffer
+instanceKlass jdk/internal/math/FloatingDecimal$PreparedASCIIToBinaryBuffer
+instanceKlass jdk/internal/math/FloatingDecimal$ASCIIToBinaryConverter
+instanceKlass jdk/internal/math/FloatingDecimal$BinaryToASCIIBuffer
+instanceKlass jdk/internal/math/FloatingDecimal$ExceptionalBinaryToASCIIBuffer
+instanceKlass jdk/internal/math/FloatingDecimal$BinaryToASCIIConverter
+instanceKlass jdk/internal/math/FloatingDecimal
+instanceKlass java/security/Provider$EngineDescription
+instanceKlass java/security/Provider$ServiceKey
+instanceKlass sun/security/jca/ProviderConfig
+instanceKlass sun/security/jca/ProviderList
+instanceKlass sun/security/jca/Providers
+instanceKlass java/util/UUID$Holder
+instanceKlass org/hibernate/id/uuid/LocalObjectUuidHelper
+instanceKlass org/hibernate/type/spi/TypeConfiguration$Scope
+instanceKlass org/hibernate/metamodel/spi/MetamodelImplementor
+instanceKlass org/hibernate/Metamodel
+instanceKlass javax/persistence/metamodel/Metamodel
+instanceKlass org/hibernate/type/spi/TypeConfiguration
+instanceKlass org/hibernate/SessionFactoryObserver
+instanceKlass org/hibernate/boot/archive/spi/ArchiveDescriptorFactory
+instanceKlass org/hibernate/boot/archive/scan/internal/StandardScanOptions
+instanceKlass org/hibernate/jpa/internal/MutableJpaComplianceImpl
+instanceKlass org/hibernate/cfg/annotations/reflection/internal/XMLContext
+instanceKlass org/hibernate/annotations/common/reflection/java/JavaMetadataProvider
+instanceKlass org/hibernate/annotations/common/reflection/AnnotationReader
+instanceKlass org/hibernate/cfg/annotations/reflection/internal/JPAXMLOverriddenMetadataProvider
+instanceKlass org/hibernate/annotations/common/reflection/XMethod
+instanceKlass org/hibernate/annotations/common/reflection/XProperty
+instanceKlass org/hibernate/annotations/common/reflection/XMember
+instanceKlass org/hibernate/annotations/common/reflection/java/JavaXAnnotatedElement
+instanceKlass org/hibernate/annotations/common/reflection/XClass
+instanceKlass org/hibernate/annotations/common/reflection/java/generics/TypeEnvironment
+instanceKlass org/hibernate/annotations/common/reflection/java/XTypeConstruction
+instanceKlass org/hibernate/annotations/common/reflection/java/TypeEnvironmentMap
+instanceKlass org/hibernate/annotations/common/util/StandardClassLoaderDelegateImpl
+instanceKlass org/hibernate/annotations/common/util/impl/Log
+instanceKlass org/hibernate/annotations/common/util/impl/LoggerFactory
