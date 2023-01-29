@@ -1,8 +1,6 @@
 package es.pildoras.conexionHibernate;
 
-import java.time.Instant;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Date;
 
@@ -12,6 +10,7 @@ import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.query.Query;
 
 public class InsertaPedido {
 
@@ -31,15 +30,21 @@ public class InsertaPedido {
 			
 			Cliente cliente1 = session.get(Cliente.class, 2);
 			
-			for (Pedido pedido:cliente1.getPedidos()) {
-				System.out.println(pedido);
-			}
+			//forma alternativa si el cliente tiene fetchtype lazy
+//			Query<Cliente> consulta = session.createQuery("SELECT cl FROM cliente cl JOIN FETCH cl.pedidos WHERE cl.id=:elClienteId",Cliente.class);
+//			consulta.setParameter("elClienteId", 1);
+//			Cliente cliente1 = consulta.getSingleResult();
 			
+			//Agregar pedido
 			Pedido pedido1 = new Pedido(Date.from(LocalDate.of(2022, 1, 15).atStartOfDay().toInstant(ZoneOffset.ofHours(-3))));
 			cliente1.agregarPedido(pedido1);
 			session.save(pedido1);
 			
 			session.getTransaction().commit();
+			
+			//consulta pedidos
+			System.out.println(cliente1.getPedidos());
+			
 			session.close();
 		} finally {
 			if (session.isOpen()) {

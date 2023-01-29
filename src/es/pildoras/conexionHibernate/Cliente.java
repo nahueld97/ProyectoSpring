@@ -81,7 +81,9 @@ public class Cliente {
 		this.detallesCliente = detallesCliente;
 	}
 	
-	@OneToMany(mappedBy = "cliente",cascade = {CascadeType.PERSIST,CascadeType.DETACH,CascadeType.PERSIST,CascadeType.REFRESH})
+	@OneToMany(fetch = FetchType.LAZY,
+			mappedBy = "cliente", 
+			cascade = {CascadeType.PERSIST,CascadeType.DETACH,CascadeType.PERSIST,CascadeType.REFRESH})
 	public List<Pedido> getPedidos() {
 		return pedidos;
 	}
